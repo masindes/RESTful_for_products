@@ -5,6 +5,8 @@ import os
 #initialize application
 app = Flask(__name__)
 
+basedir = os.path.dirname(os.path.dirname(__file__))
+
 
 #Run server
 if __name__ == '__main__':
