@@ -16,6 +16,11 @@ db = SQLAlchemy(app)
 ma = Marshmallow(app)
 
 
+# products class model
+class Products(db.Model):
+    id = db.column(db.Integer, primary_key=True)
+
+
 #Run server
 if __name__ == '__main__':
     app.run(debug=True)
