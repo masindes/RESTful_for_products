@@ -30,7 +30,10 @@ class Products(db.Model):
         self.price = price
         self.qty = qty
 
-
+# product schema
+class ProductSchema(ma.schema):
+    class meta:
+        fields = ("id", "name", "description","price",)
 
 
 
