@@ -33,9 +33,12 @@ class Products(db.Model):
 # product schema
 class ProductSchema(ma.schema):
     class meta:
-        fields = ("id", "name", "description","price",)
+        fields = ("id","name","description","price", "qty")
 
+#init schema
 
+product_schema = ProductSchema(strict=True)
+products_schema = roductSchema(many=True,strict=True)
 
 #Run server
 if __name__ == '__main__':
