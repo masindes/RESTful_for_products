@@ -19,6 +19,10 @@ ma = Marshmallow(app)
 # products class model
 class Products(db.Model):
     id = db.column(db.Integer, primary_key=True)
+    name = db.column(db.String(100),unique=True)
+    description = db.column(db.String(200))
+    price = db.column(db.Float)
+    qty = db.column(db.Integer)
 
 
 #Run server
