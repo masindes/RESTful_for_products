@@ -24,6 +24,13 @@ class Products(db.Model):
     price = db.column(db.Float)
     qty = db.column(db.Integer)
 
+    def __nint__(self,name,description,price,qty):
+        self.name = name
+        self.description = description
+        self.price = price
+        self.qty = qty
+
+
 
 #Run server
 if __name__ == '__main__':
