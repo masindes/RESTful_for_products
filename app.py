@@ -40,6 +40,16 @@ class ProductSchema(ma.Schema):
 product_schema = ProductSchema()
 products_schema = ProductSchema(many=True)
 
+
+# craete a product 
+@app.route(`/product`,mehods=[`POST`])
+def add_product():
+    name = request.json[`name`]
+    description = request.json[`description`]
+    price = request.json[`price`]
+    qty = request.json[`qty`]
+ 
+
 # Create database tables - modern approach
 with app.app_context():
     db.create_all()
